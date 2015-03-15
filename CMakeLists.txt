@@ -23,6 +23,14 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 # libgmock 
 add_subdirectory(
-	${CMAKE_CURRENT_SOURCE_DIR}/libgmock
-	${CMAKE_CURRENT_BINARY_DIR}/libgmock)
+  ${CMAKE_CURRENT_SOURCE_DIR}/libgmock
+  ${CMAKE_CURRENT_BINARY_DIR}/libgmock)
+
+# examples 
+if (BUILD_EXAMPLES EQUAL 1) 
+  message(STATUS "*** BUILD_EXAMPLES=${BUILD_EXAMPLES}")
+  add_subdirectory(
+    ${CMAKE_CURRENT_SOURCE_DIR}/examples
+    ${CMAKE_CURRENT_BINARY_DIR}/examples)
+endif ()
 

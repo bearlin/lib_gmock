@@ -8,17 +8,43 @@ Before build please install cmake, gcc, g++, gcc-multilib and g++-multilib
 pthread is for googletest/googlemock working threadsafe  
 
 #Build
-USAGE: ./build.sh [shared] [clean]  
+USAGE: ./build.sh [debug] [shared] [examples] [clean]  
 Examples:  
 ```sh
 ./build.sh                (build static libraries to Build/ folder)
+./build.sh debug          (build debug version)
+./build.sh debug examples (build debug version with examples)
 ./build.sh shared         (build shared libraries to Build/ folder)
 ./build.sh clean          (clean Build/ folder)
 ```
 
 #Run the demo
 ```sh
-TODO.
+$ ./Build/examples/gtest/examples_gtest_sample1_unittest
+Running main() from gtest_main.cc
+[==========] Running 6 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from FactorialTest
+[ RUN      ] FactorialTest.Negative
+[       OK ] FactorialTest.Negative (0 ms)
+[ RUN      ] FactorialTest.Zero
+[       OK ] FactorialTest.Zero (0 ms)
+[ RUN      ] FactorialTest.Positive
+[       OK ] FactorialTest.Positive (0 ms)
+[----------] 3 tests from FactorialTest (0 ms total)
+
+[----------] 3 tests from IsPrimeTest
+[ RUN      ] IsPrimeTest.Negative
+[       OK ] IsPrimeTest.Negative (0 ms)
+[ RUN      ] IsPrimeTest.Trivial
+[       OK ] IsPrimeTest.Trivial (0 ms)
+[ RUN      ] IsPrimeTest.Positive
+[       OK ] IsPrimeTest.Positive (0 ms)
+[----------] 3 tests from IsPrimeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 2 test cases ran. (0 ms total)
+[  PASSED  ] 6 tests.
 ```
 
 #Other Infomation
