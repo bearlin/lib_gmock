@@ -5,7 +5,7 @@ libgmock and libgtest will be created, you can link them to your C/C++  projects
 #Environment setup
 The develop environment is Ubuntu 14.04 64bit  
 Before build please install cmake, gcc, g++, gcc-multilib and g++-multilib  
-pthread is for googletest/googlemock working threadsafe  
+pthread is for googletest/googlemock working threadsafely  
 
 #Build
 USAGE: ./build.sh [debug] [shared] [examples] [clean]  
@@ -20,6 +20,19 @@ Examples:
 
 #Run the demo
 ```sh
+$ find . -name "*_unittest" -type f
+./Build/examples/gmock/examples_gmock_sample1_unittest
+./Build/examples/gtest/examples_gtest_sample10_unittest
+./Build/examples/gtest/examples_gtest_sample1_unittest
+./Build/examples/gtest/examples_gtest_sample2_unittest
+./Build/examples/gtest/examples_gtest_sample3_unittest
+./Build/examples/gtest/examples_gtest_sample4_unittest
+./Build/examples/gtest/examples_gtest_sample5_unittest
+./Build/examples/gtest/examples_gtest_sample6_unittest
+./Build/examples/gtest/examples_gtest_sample7_unittest
+./Build/examples/gtest/examples_gtest_sample8_unittest
+./Build/examples/gtest/examples_gtest_sample9_unittest
+
 $ ./Build/examples/gtest/examples_gtest_sample1_unittest
 Running main() from gtest_main.cc
 [==========] Running 6 tests from 2 test cases.
