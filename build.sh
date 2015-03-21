@@ -9,7 +9,7 @@ BUILD_EXAMPLES="-DBUILD_EXAMPLES=0"
 for argument in $@
 do
   if [ "$argument" == "clean" ]; then
-    rm -rf Build
+    rm -rf build
     exit 0;
   fi
   if [ "$argument" == "debug" ]; then
@@ -27,5 +27,5 @@ done
 echo "BUILD_TYPE=$BUILD_TYPE"
 echo "LIB_TYPE=$LIB_TYPE"
 echo "BUILD_EXAMPLES=$BUILD_EXAMPLES"
-mkdir -p Build && cd Build && rm -rf && cmake $BUILD_TYPE $LIB_TYPE $BUILD_EXAMPLES .. && make && cd -
+mkdir -p build && cd build && rm -rf && cmake $BUILD_TYPE $LIB_TYPE $BUILD_EXAMPLES .. && make && cd -
 
